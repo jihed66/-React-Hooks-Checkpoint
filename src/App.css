@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #141414;
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #141414;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 0 15px;
+}
+
+.navbar a:hover {
+  color: #e50914;
+}
+
+.movie-list {
+  display: flex;
+  flex-direction: row;
+  margin-top: 60px;
+  padding: 20px;
+}
+
+.movie-row {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+}
+
+.movie-card {
+  width: 150px;
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+.filter {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.filter input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 45%;
+}
+
+.add-movie {
+  display: flex;
+  width: 300px;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.add-movie input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-movie button {
+  background-color: #e50914;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.add-movie button:hover {
+  background-color: #b81d13;
+}
+.nav{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
