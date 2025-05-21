@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const Filter = ({ onFilter }) => {
     return (
       <div className="filter">
@@ -13,6 +14,8 @@ const Filter = ({ onFilter }) => {
           max="10"
           onChange={(e) => onFilter('rating', e.target.value)}
         />
+        <br />
+        <Link to="/list"><button>go list</button></Link>
       </div>
     );
   };

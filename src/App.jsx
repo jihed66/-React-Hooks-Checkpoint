@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import MovieCard from './Movieee';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MovieList from './Liste';
 import Filter from './Filter';
 import AddMovie from './Addmov';
@@ -51,22 +51,36 @@ const App = () => {
   );
 
   return (
-    <div className="App">
-      <nav className="nav">
-      <h1>Jihed Flix</h1>
-
-        <details>
-          <summary>Filter movies  </summary>
-          <Filter onFilter={handleFilterChange} />
+<div className="App">
+  <h1>Jihed Flix</h1>
+  <BrowserRouter>
+    <Routes>
+    <Route
+      path="/filter"
+      element={
         
-        </details>
+        
         <details>
-          <summary>Add Movie</summary>
-          <AddMovie onAdd={handleAddMovie} />
+          <summary>Filter movies</summary>
+          <Filter onFilter={handleFilterChange} />
         </details>
-      </nav>
-      <MovieList movies={filteredMovies} />
-    </div>
+      }
+    />
+    <Route
+      path="/add"
+      element={
+        <details>
+          <summary>Add a movie</summary>
+          <AddMovie onAddMovie={handleAddMovie} />
+        </details>
+      }
+    />
+    <Route path="/list" element={<MovieList movies={filteredMovies} />} />
+    </Routes>
+
+  </BrowserRouter>
+  
+</div>
   );
 };
 
